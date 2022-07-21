@@ -1,0 +1,56 @@
+.intro{
+    background-color: orange;
+    color: black;
+    padding: 25px;
+    border-radius: 7px;
+
+}
+
+
+.avatar{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.avatar > div{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    background-color: rgb(98, 98, 98);
+    border-radius: 50%;
+
+}
+
+.avatar > div.connected{
+    background-color: green;
+}
+
+
+body{
+    margin: 0;
+}
+
+.feild{
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    position: relative;
+}
+
+.feild > .ball{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: white;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
