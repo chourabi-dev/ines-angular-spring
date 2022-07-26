@@ -1,0 +1,21 @@
+
+
+<h3>
+    Panier list
+</h3>
+
+
+
+<div>
+
+    <ul>
+        <li *ngFor="let p of produitAjouteeAuxPanier">
+            <h3>{{ p.title }}</h3>
+
+            <button (click)="supprimer(p.id)" class="btn btn-success">supprimer</button>
+
+            <hr>
+
+        </li>
+    </ul>
+</div>

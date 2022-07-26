@@ -184,7 +184,7 @@
  
 
 <!--************************************************* componenets *****************************************-->
-
+<!--
 
 <app-navbar></app-navbar>
 
@@ -198,25 +198,25 @@
     
     <div class="col-sm-9">
         
-        <div class="col-sm-12">
-          <app-article></app-article>
+        <div class="col-sm-12"  *ngFor="let a of articles">
+          <app-article  [title]="a.title"    [content]="a.content"   ></app-article>
         </div>
 
-        <div class="col-sm-12">
-          <app-article></app-article>
-        </div>
-
-        <div class="col-sm-12">
-          <app-article></app-article>
-        </div>
-
-        <div class="col-sm-12">
-          <app-article></app-article>
-        </div>
+       
 
         
     </div>
     
     
   </div>
+</div>-->
+
+
+<!--**************************routing***************************************-->
+
+
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+  <router-outlet></router-outlet>
 </div>

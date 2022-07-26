@@ -27,3 +27,14 @@ npm i bootstrap
 
 add new componenet
 ng g c com_name
+
+
+
+add new servcie 
+
+ng g s service_name
+
+
+add new guard
+
+ng g g guard_name

@@ -123,5 +123,17 @@ export class AppComponent {
   }
 
 
+  /************************************************************************* */
+
+
+
+  articles:any[]=[
+    { title:'Angualr', content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nihil at animi? Id quos autem deleniti culpa, consectetur, ipsum quia voluptatum eius enim eaque repellendus dolorum possimus porro minima doloribus?" },
+    { title:'Springboot', content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nihil at animi? Id quos autem deleniti culpa, consectetur, ipsum quia voluptatum eius enim eaque repellendus dolorum possimus porro minima doloribus?" },
+    { title:'ReactJS', content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nihil at animi? Id quos autem deleniti culpa, consectetur, ipsum quia voluptatum eius enim eaque repellendus dolorum possimus porro minima doloribus?" },
+    
+  ]
+
+
 
 }

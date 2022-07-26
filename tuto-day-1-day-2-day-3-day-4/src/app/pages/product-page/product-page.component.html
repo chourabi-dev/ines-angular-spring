@@ -1,0 +1,19 @@
+<h3>
+    Product list
+</h3>
+
+
+
+<div>
+
+    <ul>
+        <li *ngFor="let p of produits">
+            <h3>{{ p.title }}</h3>
+
+            <button (click)="ajouter(p)" class="btn btn-success">ajouter au panier</button>
+
+            <hr>
+
+        </li>
+    </ul>
+</div>
