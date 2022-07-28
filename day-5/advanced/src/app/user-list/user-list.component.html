@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">
+    <h3>Please wait...</h3>
+</div>
+
+
+<div *ngIf="isLoading == false">
+    <h3>User list</h3>
+
+    <ul>
+        <li *ngFor="let user of userList">
+            <h3>{{ user.name }}</h3>
+            <p>
+                <small>{{ user.email }}</small>
+            </p>
+        </li>
+    </ul>
+</div>
+
+
