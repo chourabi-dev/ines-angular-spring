@@ -38,3 +38,9 @@ ng g s service_name
 add new guard
 
 ng g g guard_name
+
+
+
+add new module
+
+ng g m module_name --route "route" --module app.module
