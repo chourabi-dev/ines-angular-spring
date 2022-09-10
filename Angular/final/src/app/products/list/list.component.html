@@ -1,0 +1,70 @@
+<div class="conatiner">
+    <div class="d-flex justify-content-between">
+        <div>
+            <h3>Products List</h3>
+        </div>
+
+
+        <div>
+            <a routerLink="/products/add" class="btn btn-primary">Add</a>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <div class="alert alert-danger" *ngIf=" errorMessage != '' ">
+        {{ errorMessage }} <br>
+
+        <button class="btn btn-warning" (click)="initData()">try again</button>
+    </div>
+
+
+    <div class="loader text-center" *ngIf="isLoading == true">
+        <div class="spinner-grow" style="width: 50px; height: 50px;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+
+
+    <div class="card" *ngIf=" products.length != 0 ">
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of products">
+                    <th scope="row">{{ p.id }}</th>
+                    <td>{{ p.title }}</td>
+                    <td>{{ p.price | currency }}</td>
+                    <td>
+                        
+                        <span *ngIf=" p.quantity == 0 " class="pill rounded-pill badge bg-danger text-white">Out of stock</span>
+                        
+                        <span *ngIf=" p.quantity != 0 " class="pill rounded-pill badge bg-primary text-white">{{ p.quantity | number }}</span>
+                        
+
+                    </td>
+                    <td>
+
+                        <a routerLink="#" style="margin-right: 20px;" class="btn btn-sm btn-success"><i class="bx bxs-edit"></i></a>
+
+                        <button (click)="deleteProduct(  p.id )"  class="btn btn-sm btn-danger"><i class="bx bxs-trash"></i></button>
+
+                    </td>
+                  </tr>
+                  
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

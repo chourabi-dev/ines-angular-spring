@@ -1,0 +1,80 @@
+<div class="conatiner">
+    <div class="d-flex justify-content-between">
+        <div>
+            <h3>Add new products </h3>
+        </div>
+
+
+        <div>
+            <a routerLink="/products" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <div class="alert alert-danger" *ngIf=" errorMessage != '' ">
+        {{ errorMessage }} <br>
+
+    </div>
+
+
+    <div class="alert alert-success" *ngIf=" successMessage != '' ">
+        {{ successMessage }} <br>
+
+        
+    </div>
+
+
+    <div class="loader text-center" *ngIf="isLoading == true">
+        <div class="spinner-grow" style="width: 50px; height: 50px;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+
+
+    <div class="card" >
+        <div class="card-body">
+            
+
+
+
+            <form  [formGroup]="form"  (ngSubmit)="save()" >
+
+                <div class="form-group mb-3">
+                    <label for="">Title</label>
+                    <input type="text" class="form-control"  formControlName="title"  >
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Price</label>
+                    <input type="text" class="form-control"  formControlName="price"  >
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Quantity</label>
+                    <input type="text" class="form-control"  formControlName="quantity"  >
+                </div>
+                <div class="form-group mb-3">
+                    <label for="">Category</label>
+                    <select class="form-control"  formControlName="category"  >
+                        <option value="">Please choose a value</option>
+
+                        <option [value]="c.id" *ngFor="let c of categories">{{ c.name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-success"   [disabled] = " ! form.valid " >Save</button>
+                </div>
+
+                
+                
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
